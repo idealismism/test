@@ -1,20 +1,23 @@
-package com.itheima.Test;
+package com.itheima.test;
 
 import java.util.Scanner;
 
 public class Test2 {
     public static void main(String[] args) {
-        /*if的第二种格式
-        联系：吃饭，键盘录入一个整数，表示身上的钱，如果大于等于100元，吃网红餐厅，
-        否则吃小吃
+        /*需求:
+        你和你的约会对象正试图在餐厅获得一张桌子;
+        键盘录入俩个整数,表示你和你对象衣服的时髦度,(手动录入0-10之间的
+        整数),如果你的时髦度大于你对象的时髦度,相亲就成功,输出true.
          */
+        //1.键盘录入俩个整数表示衣服的时髦度
         Scanner sc = new Scanner(System.in);
-        System.out.println("请输入身上的钱");
-        int money = sc.nextInt();
-        if (money >= 100){
-            System.out.println("吃网红餐厅");
-            }else {
-            System.out.println("吃小吃");
-        }
+        System.out.println("请输入我们自己的衣服时髦度");
+        int myfashion =sc.nextInt();
+        System.out.println("请输入相亲对象衣服的时髦度");
+        int hisfashion = sc.nextInt();
+        //2.对比
+        boolean result = myfashion > hisfashion;
+        //3.打印结果
+        System.out.println(result);
     }
 }

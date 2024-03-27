@@ -1,22 +1,20 @@
-package com.itheima.Test;
+package com.itheima.test;
 
 import java.util.Scanner;
 
 public class Test4 {
     public static void main(String[] args) {
-        /*练习：影院选座
-        假设某电影院售卖了100张票，序号为1-100，
-        其中奇数号坐左边，偶数票坐右边
+        /*需求：动物园里有两只老虎，体重分别为通过键盘录入获得，
+        请用程序实现判断两只老虎的体重是否相同
          */
+        //1.键盘录入两只老虎的体重
         Scanner sc = new Scanner(System.in);
-        System.out.println("电影票的票号");
-        int number = sc.nextInt();
-        if (number >= 0 && number <= 100){
-            if (number % 2 == 0) {
-                System.out.println("坐右边");
-            } else {
-                System.out.println("坐左边");
-            }
-        }
+        System.out.println("请输入第一只老虎的体重");
+        int weight1 = sc.nextInt();
+        System.out.println("请输入第二只老虎的体重");
+        int weight2 = sc.nextInt();
+        //2.比较
+        String result = weight1==weight2?"相同":"不同";
+        System.out.println(result);
     }
 }
